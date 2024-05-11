@@ -7,9 +7,10 @@ const db = await connectToDb();
 router.get('/user', (res,req)=>{
     res.status(200).send('user!')
 })
-const apiKey = 'AIzaSyDtVYyt5dRVALnFw855Z6hKAf2twoZgzsM';
+const apiKey = process.env.GOOGLE_API_KEY;
 const apiUrl = `https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=48.8566,2.3522&radius=50000&type=tourist_attraction&key=${apiKey}`;
 
+router.get('/call/google',(res,req)=>{
 fetch(apiUrl)
   .then(response => {
     if (!response.ok) {
@@ -27,5 +28,5 @@ fetch(apiUrl)
   .catch(error => {
     console.error('There was a problem with your fetch operation:', error);
   });
-
+})
 export default router;
