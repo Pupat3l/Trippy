@@ -1,16 +1,26 @@
 import React,{useEffect} from "react";
-
+import Navbar from "../Navbar";
+import '../../App.css';
+import LogOutButton from "../../components/LogOutButton";
+import LoginButton from "../../components/loginButton";
+import Profile from "../../components/Profile";
+import SearchBox from "../Searchbox";
 export default function LandingPage() {
     useEffect(() => {
-        fetch("/api/5").then((response) =>
-        response.json().then((json) => console.log(json))
-        );
-    }, []);      
+        fetchit();
+      }, []);    
+    const fetchit = () => {
+        fetch("/api/hello")
+        .then(res=> res.json())
+        .then(json=> console.log(json));
+      }         
     return (
         <div>
-            <nav>
-                <h1>Trippy</h1>
-            </nav>
+            <Navbar />
+            <h1>Auth0 Login</h1>
+            <LoginButton />
+            <LogOutButton />
+            <Profile />
         </div>
     );
 };
