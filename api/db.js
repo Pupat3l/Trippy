@@ -7,7 +7,7 @@ const mongo_url = process.env.MONGODB_URL;
 const dbName = 'trippy_dev';
 
 async function connectToDb() {
-    const client = new MongoClient(mongo_url, { useUnifiedTopology: true });
+    const client = new MongoClient(mongo_url);
     try {
         await client.connect();
         console.log('Connected to MongoDB');
