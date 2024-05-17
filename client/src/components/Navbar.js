@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom';
 export default function Navbar(){
     return (
     <header>
-        <nav className="navbar bg-dark border-bottom fixed-top navbar-expand-lg" data-bs-theme="dark">
+        <nav className="navbar bg-dark border-bottom sticky-top navbar-expand-lg" data-bs-theme="dark">
             <div className="container-fluid">
                 <Link className="navbar-brand" to="/">
                 <h1>Trippy</h1>
@@ -14,7 +14,7 @@ export default function Navbar(){
                 </button>
                 <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div className="navbar-nav nav-underline ms-auto">
-                        <Link className="nav-link active text-danger" to="/">Home</Link>
+                        <Link className="nav-link text-white" to="/">Home</Link>
                         <Link className="nav-link text-white" to="/profile">Profile</Link>
                     </div>
                 </div>

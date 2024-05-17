@@ -50,12 +50,12 @@ function Dashboard() {
     return (
       <>
         <Navbar />
-        <div className="container main-content">
+        <div className="main-content">
             <div className="row search-maps">
-              <div className="col-md-6">
+              <div className="col-md-6 blur-box">
                 <Search onSelect={handlePlaceSelect}  />
               </div>
-              <div className="col-md-6">
+              <div className="col-md-6 blur-box">
                 <Maps selectedPlace={selectedPlace} />
               </div>
             </div>
