@@ -8,7 +8,7 @@ html, body, #root {
 }
 
 .navbar{
-    background: rgba(255, 255, 255, 0.4); 
+    background: rgba(13, 12, 12, 0.6); 
     backdrop-filter: blur(10px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 1rem;
@@ -16,6 +16,7 @@ html, body, #root {
     top: 0;
     z-index: 1000;
 }
+
 .main-content {
     flex-grow: 1;
     overflow-y: auto;
@@ -24,7 +25,9 @@ html, body, #root {
     background: rgba(255, 255, 255, 0.4); 
     backdrop-filter: blur(10px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
     padding: 20px;
+    justify-content: center;
     align-items: center;
     text-align: center;
     height: fit-content;
@@ -41,10 +44,11 @@ html, body, #root {
     height: 400px;
     overflow: hidden;
     margin-bottom: 5px;
+    border-radius: 8px;
 }  
 
 .footer {
-    background: rgba(255, 255, 255, 0.4); 
+    background: rgba(13, 12, 12, 0.4); 
     backdrop-filter: blur(10px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
@@ -56,13 +60,16 @@ html, body, #root {
     backdrop-filter: blur(10px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    height: 30em;
-    margin-bottom: 5px;
+    margin-bottom: 20px;
+    border-radius: 8px;
 }
   
 .box-title {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     text-align: center;
+    font-weight:bold ;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-decoration: underline;
 }
 
 .item-box{
@@ -89,6 +96,27 @@ button{
     font-size: medium;
     background: none;
 }
+
+.auth-button{
+  background-color: #014bede7;
+  color: white;
+  border: none; 
+  padding: 10px 20px; 
+  font-size: 16px;
+  border-radius: 5px; 
+  cursor: pointer; 
+  transition: background-color 0.3s ease;
+}
+
+.auth-button:hover {
+  background-color: #001f63e7;
+}
+
+.auth-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.5); 
+}
+
 .link-btn{
     padding: 5px;
     border-color: black;
@@ -102,18 +130,20 @@ button{
 }
 
 .item button {
-    width: 40px;
-    height: 40px;
-    font-size: 20px;
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
     border-radius: 5px;
     cursor: pointer;
     outline: none;
     background: none;
+    border: none;
+    padding: 0;
 }
   
 .item button:hover{
-    background-color: rgb(167, 167, 211);
-    color:#007bff ;
+    background-color: rgba(33, 31, 29, 0.535);
+    color:#e8ecf0 ;
 }
 .save-button {
     position: absolute;
@@ -128,7 +158,8 @@ button{
   }
   
   .save-button:hover {
-    background-color: #0056b3;
+    background-color: rgba(33, 31, 29, 0.535);
+    color:#e8ecf0 ;
   }
   
   

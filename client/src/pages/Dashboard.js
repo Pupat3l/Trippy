@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { useAuth0 } from '@auth0/auth0-react';
+import { Navigate } from 'react-router-dom';
 import Search from '../components/Search.js';
 import AttractionList from '../components/AttractionList';
 import Itinerary from '../components/Itinerary';
@@ -12,6 +14,7 @@ function Dashboard() {
     const [selectedPlace, setSelectedPlace] = useState(null);
     const [attractions, setAttractions] = useState([]);
     const [itinerary, setItinerary] = useState([]);
+    const { isAuthenticated } = useAuth0();
 
     const handlePlaceSelect = place => {
         setSelectedPlace(place);
@@ -46,7 +49,9 @@ function Dashboard() {
         alert('Attraction already exists in Itinerary');
       }
     };
-  
+    if (!isAuthenticated) {
+      return <Navigate to="/" replace />;
+  }
     return (
       <>
         <Navbar />

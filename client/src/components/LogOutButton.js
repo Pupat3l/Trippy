@@ -5,7 +5,7 @@ export default function LogOutButton(){
 
     return(
         isAuthenticated && (
-        <button onClick={()=> logout({ logoutParams: { returnTo: window.location.origin } })}>
+        <button className="auth-button" onClick={()=> logout({ logoutParams: { returnTo: window.location.origin } })}>
             Sign Out
         </button>
         )
