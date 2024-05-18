@@ -16,8 +16,6 @@ router.get('/user', async (res,req)=>{
 
 router.get('/user/itinerary', async (req, res) => {
   try {
-    const itineraryId = 'req.query.userId';
-
     const itineraries = await db.collection('itineraries').find({}).toArray();
 
     res.json(itineraries);
